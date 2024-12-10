@@ -1,0 +1,47 @@
+<!-- <button (click)="agregarPelicula()">Agregar pelicula</button> -->
+<!-- <ng-container vacio>
+  <span style="color: red;">No hay peliculas para ti</span>
+  </ng-container> -->
+
+
+<app-listado-generico [listado]="peliculas">
+
+
+
+  <ng-container contenido>
+
+
+    <div class="peliculas-contenedor">
+      @for(p of peliculas; track $index){
+      <div class="pelicula-contenedor">
+
+        <a>
+          @if(p.poster){
+          <img [src]="p.poster" width="169" height="250" />
+          }@else{
+          <img src="default.jpg" width="169" height="250" />
+
+          }
+        </a>
+
+        <p>
+          <a>{{p.titulo}}</a>
+        </p>
+
+        <div>
+
+          <a mat-flat-button>Editar</a>
+          <button mat-flat-button type="button" color="warn">Borrar</button>
+        </div>
+        
+      </div>
+
+
+
+      }
+
+    </div>
+
+  </ng-container>
+
+</app-listado-generico>

@@ -1,0 +1,16 @@
+.flechaArriba{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1500;
+    color:black;
+background: lightcyan;
+
+    transition: 0.5s;
+    
+}
+
+.flechaArriba:hover{
+color:wheat;
+background: black;
+}
